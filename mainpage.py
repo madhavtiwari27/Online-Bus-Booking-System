@@ -1,0 +1,21 @@
+from tkinter import *
+root=Tk()
+h,w=root.winfo_screenheight(),root.winfo_screenwidth()
+root.geometry('%dx%d+0+0'%(w,h))
+bus=PhotoImage(file='.//Bus_for_project.png')
+fr1=Frame(root)
+fr1.grid(row=0,column=0,columnspan=10)
+fr2=Frame(root)
+fr2.grid(row=1,column=0,columnspan=10)
+Label(fr1,image=bus).grid(row=0,column=0,padx=w//2.4)
+Label(fr2,text="Online Bus Booking System",font='arial 30 bold',fg="Red",bg="Light Blue").grid(row=1,column=2,pady=50)
+Label(fr2,text="Name:Madhav Tiwari",fg="blue",font='arial 20 bold').grid(row=2,column=2)
+Label(fr2,text="Er:221B222",fg="blue",font='arial 20 bold').grid(row=3,column=2)
+Label(fr2,text="Mobile:9424441289",fg="blue",font='arial 20 bold').grid(row=4,column=2)
+Label(fr2,text="Submitted to:Dr Mahesh Kumar Sir",fg="Red",bg="Light Blue",font='arial 30 bold').grid(row=5,column=2,pady=40)
+Label(fr2,text="Project Based Learning",fg="red",font='arial 20 bold').grid(row=6,column=2)
+def splashpage():
+    root.destroy()
+    import SeatBokingorCheckBookedSeat
+root.after(5000,splashpage)
+root.mainloop()
